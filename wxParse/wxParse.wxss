@@ -9,7 +9,11 @@
  * for: 微信小程序富文本解析
  * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
  */
-
+page {
+  line-height: 1.6;
+  font-size:14px;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+}
 .wxParse{
     margin: 0 5px;
     font-family: Helvetica,sans-serif;
@@ -19,6 +23,7 @@
 }
 view{
     word-break:break-all; overflow:auto;
+    font-size:14px;
 }
 .wxParse-inline{
     display: inline;

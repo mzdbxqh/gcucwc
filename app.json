@@ -5,8 +5,8 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "华广财务在线",
-    "navigationBarBackgroundColor": "#999999",
+    "navigationBarTitleText": "华广财务在线 - 暑期专题页",
+    "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#f8f8f8"
   },
   "networkTimeout": {

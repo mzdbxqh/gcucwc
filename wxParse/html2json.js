@@ -53,10 +53,19 @@ function removeDOCTYPE(html) {
         .replace(/<.*!DOCTYPE.*\>\n/, '');
 }
 
+function trimHtml(html) {
+  return html
+        .replace(/\n+/g, '')
+        .replace(/<!--.*?-->/ig, '')
+        .replace(/\/\*.*?\*\//ig, '')
+        .replace(/[ ]+</ig, '<')
+}
+
 
 function html2json(html, bindName) {
     //处理字符串
     html = removeDOCTYPE(html);
+    html = trimHtml(html);
     html = wxDiscode.strDiscode(html);
     //生成node节点
     var bufArray = [];
@@ -100,14 +109,14 @@ function html2json(html, bindName) {
                     var name = attr.name;
                     var value = attr.value;
                     if (name == 'class') {
-                        console.dir(value);
+                        // console.dir(value);
                         //  value = value.join("")
                         node.classStr = value;
                     }
                     // has multi attibutes
                     // make it array of attribute
                     if (name == 'style') {
-                        console.dir(value);
+                        // console.dir(value);
                         //  value = value.join("")
                         node.styleStr = value;
                     }
