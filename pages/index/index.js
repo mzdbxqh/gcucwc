@@ -6,14 +6,10 @@ Page({
         name: '缴费方式',
         open: false,
         pages: [
-            {
-              title: '2017年老生缴费指南',
-              pid: 0
-            },
-            {
-              title: '柜台缴费说明',
-              pid: 5
-            },
+            // {
+            //   title: '2017年老生缴费指南',
+            //   pid: 0
+            // },
             {
               title: '网银缴费流程',
               pid: 1
@@ -25,6 +21,10 @@ Page({
             {
               title: '建行金蜜蜂App缴费流程',
               pid: 3
+            },
+            {
+              title: '柜台缴费说明',
+              pid: 5
             },
           ]
       },
@@ -53,7 +53,7 @@ Page({
         oepn: false,
         pages: [
           {
-            title: '如何查询新生学号',
+            title: '申请了生源地贷款该如何缴费',
             pid: 21
           },
           {
@@ -76,5 +76,8 @@ Page({
     this.setData({
       list: list
     });
+  },
+  onLoad: function (e) {
+    
   }
 });

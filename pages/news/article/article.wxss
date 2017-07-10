@@ -1,1 +1,9 @@
 /* article.wxss */
+.bottomBar {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  height: 50px;
+  width: 80px;
+  opacity: 0.7;
+}

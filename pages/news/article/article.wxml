@@ -1,5 +1,7 @@
 <import src="../../../wxParse/wxParse.wxml"/>
 <view class="wxParse">
-    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-    <button type="primary" catchtap="navBack">返回上一页</button>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<view class="bottomBar">
+  <button type="primary" catchtap="navBack">返回</button>
 </view>
