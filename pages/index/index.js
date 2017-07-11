@@ -6,10 +6,6 @@ Page({
         name: '缴费方式',
         open: false,
         pages: [
-            // {
-            //   title: '2017年老生缴费指南',
-            //   pid: 0
-            // },
             {
               title: '网银缴费流程',
               pid: 1
@@ -25,7 +21,7 @@ Page({
             {
               title: '柜台缴费说明',
               pid: 5
-            },
+            }
           ]
       },
       {
