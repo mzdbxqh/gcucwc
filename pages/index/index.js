@@ -1,3 +1,4 @@
+var jsUtil = require('../../utils/util.js')
 Page({
   data: {
     list: [
@@ -14,10 +15,10 @@ Page({
               title: '手机银行缴费流程',
               pid: 2
             },
-            {
-              title: '建行金蜜蜂App缴费流程',
-              pid: 3
-            },
+            // {
+            //   title: '建行金蜜蜂App缴费流程',
+            //   pid: 3
+            // },
             {
               title: '柜台缴费说明',
               pid: 5
@@ -74,6 +75,8 @@ Page({
     });
   },
   onLoad: function (e) {
-    
+    jsUtil.checkVersion(function(){
+
+    })
   }
 });

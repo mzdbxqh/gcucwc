@@ -1,21 +1,51 @@
-function formatTime(date) {
-  var year = date.getFullYear()
-  var month = date.getMonth() + 1
-  var day = date.getDate()
-
-  var hour = date.getHours()
-  var minute = date.getMinutes()
-  var second = date.getSeconds()
-
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+//表单提示
+function formErrTip({ title, duration = 1500, callback = function () { } }) {
+  wx.showToast({
+    title: title,
+    icon: 'loading', //TODO:不支持该ICON
+    image: '../../images/tip_error.png',
+    duration: duration,
+    success: function () {
+      // bug解决之前手动延时
+      setTimeout(callback, duration)
+    }
+  })
+}
+function formSuccessTip({ title, duration = 1500, callback = function () { } }) {
+  wx.showToast({
+    title: title,
+    icon: 'success',
+    duration: duration,
+    mask: true,
+    success: function () {
+      // bug解决之前手动延时
+      setTimeout(callback, duration)
+    }
+  })
 }
 
-function formatNumber(n) {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+/**
+ * 校对微信基础库版本
+ */
+function checkVersion(callback) {
+  wx.getSystemInfo({
+    success: function (res) {
+      var SDKVersion = res.SDKVersion
+      var vers = SDKVersion.split(".")
+      if (vers[0] == 1 && vers[1] < 2) {
+        formErrTip({
+          title: "当前微信版本过低，请升级",
+          duration: 50000
+        })
+      } else {
+        callback()
+      }
+    }
+  })
 }
 
 module.exports = {
-  formatTime: formatTime
+  checkVersion: checkVersion,
+  formErrTip: formErrTip,
+  formSuccessTip: formSuccessTip
 }
