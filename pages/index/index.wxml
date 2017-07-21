@@ -32,5 +32,3 @@
     </view>
   </view>
 </view>
-
-<button catchtap="test">test</button>
