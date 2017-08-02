@@ -8,11 +8,11 @@ Page({
         open: false,
         pages: [
             {
-              title: '网银缴费流程',
+              title: '网银缴费图文流程',
               pid: 1
             },
             {
-              title: '手机银行缴费流程',
+              title: '手机银行缴费图文流程',
               pid: 2
             },
             // {
@@ -20,7 +20,7 @@ Page({
             //   pid: 3
             // },
             {
-              title: '柜台缴费说明',
+              title: '柜台缴费图文说明（必读）',
               pid: 5
             }
           ]
