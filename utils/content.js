@@ -7,7 +7,7 @@ html[0] = {
 <p>　　<strong>一、缴费期间</strong>：2017年7月15日 - 2017年8月31日。</p>
 <p>　　<strong>二、缴费方式</strong>：</p>
 <p><strong>　　1、银行统一代扣</strong></p>
-<p>　　（1）请学生通过财务查询系统（http://cwc.gcu.edu.cn:8888/）核对本人的中国建设银行账号，并查询本人应缴学杂费金额。</p>
+<p>　　（1）请学生通过财务查询系统（http://cwc.gcu.edu.cn:8088/）核对本人的中国建设银行账号，并查询本人应缴学杂费金额。</p>
 <p>　　（2）确认无误后，将学杂费足额存入本人建行账号。（注：建行代扣时，需保证卡上余额比扣款金额大1元以上，才允许扣款。为避免发生扣除异地存款手续费、银行卡年费、短信服务费等不可预知的费用后，卡上余额不足以扣款，建议适当多存一些钱）。</p>
 <div>　　（3）学校将在7月31日、8月18日、25日和31日委托建行进行统一代扣学杂费。开学后，将根据扣款结果，酌情委托建行对扣款不成功的同学再进行补扣。</div>
 <p><strong>　　2、网上银行缴费（需签约网上银行）</strong></p>
@@ -36,17 +36,17 @@ html[1] = {
   content: `
     <div class="content">
 				<p>1、登录中国建设银行网站，并按下图中红色箭头所示，点击登录按钮</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709042730519.png"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709042730519.png"></p>
 <p>2、输入账号密码，登录个人网上银行</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709042818171.png" style="width: 996px; height: 746px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709042818171.png" style="width: 996px; height: 746px;"></p>
 <p>3、登陆后，按下图红色箭头所示，将鼠标停留在菜单最右侧一项「生活服务」，然后点击「教育服务」</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709042858889.png" style="width: 996px; height: 746px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709042858889.png" style="width: 996px; height: 746px;"></p>
 <p>4、点击学杂费按钮</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709043118895.png" style="width: 996px; height: 746px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709043118895.png" style="width: 996px; height: 746px;"></p>
 <p>5、选择省、市、学校，输入学号，点击下一步</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709043144507.png" style="width: 996px; height: 746px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709043144507.png" style="width: 996px; height: 746px;"></p>
 <p>6、校对付款所用账号、应缴费金额、姓名和专业是否无误，如无误，按提示完成剩下的付款步骤。</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709043225692.png" style="width: 996px; height: 746px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709043225692.png" style="width: 996px; height: 746px;"></p>
 <p><span style="color:red">注意：如学号有误，将提示「8440ZXM04403」错误（错误代码尾数是3），表示该生不存在；如已缴费，重复查询该学号欠费信息，将提示「8440ZXM04402」错误（错误代码尾数是2），表示已缴费。</span></p>
 </div>`
 }
@@ -56,15 +56,15 @@ html[2] = {
   content: `
     <div class="content">
 				<p>1、首先，安装并打开「中国建设银行」App，从底部菜单进入「悦享生活」</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709074643454.jpg" style="width: 640px; height: 1136px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709074643454.jpg" style="width: 640px; height: 1136px;"></p>
 <p>2、在「悦享生活」栏目页面，点击「更多」按钮</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709074736181.jpg" style="width: 640px; height: 1136px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709074736181.jpg" style="width: 640px; height: 1136px;"></p>
 <p>3、在当前列表页面往下翻页，找到并点击「学杂费」按钮</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709074819265.jpg" style="width: 640px; height: 1136px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709074819265.jpg" style="width: 640px; height: 1136px;"></p>
 <p>4、首先确认地区为「广州市」，然后依次选择「缴费单位」、输入「学号」，然后点击查询</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709075359281.jpg" style="width: 640px; height: 1136px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709075359281.jpg" style="width: 640px; height: 1136px;"></p>
 <p>5、校对查询出来的「缴费金额」、「姓名」和「专业」，如信息无误，点击支付按钮，按提示完成付款操作。</p>
-<p><img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0709/20170709075455952.jpg" style="width: 640px; height: 1136px;"></p>
+<p><img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0709/20170709075455952.jpg" style="width: 640px; height: 1136px;"></p>
 <p>&nbsp;</p>
 </div>
 <p><span style="color:red">注意：如学号有误，将提示「8440ZXM04403」错误（错误代码尾数是3），表示该生不存在；如已缴费，重复查询该学号欠费信息，将提示「8440ZXM04402」错误（错误代码尾数是2），表示已缴费。</span></p>
@@ -81,7 +81,7 @@ html[5] = {
   content: `
       <div class="content">
 				<div>　　我校在建行前台系统中有两个缴费入口，其中一个已弃用，将无法找到任何学生信息。在柜台缴费时，如工作人员反馈说找不到该生信息，请主动向其出示以下操作图示：</div>
-        <img alt="" src="http://cwc.gcu.edu.cn/uploadfile/2017/0720/20170720042213568.jpg">
+        <img alt="" src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0720/20170720042213568.jpg">
       </div>
   `
 }
@@ -91,7 +91,7 @@ html[10] = {
   content: `
   <div>
   <h1>新生学费标准</h1>
-  <img src="http://cwc.gcu.edu.cn/uploadfile/2017/0710/20170710040415345.png" />
+  <img src="http://cwc.gcu.edu.cn:8088/uploadfile/2017/0710/20170710040415345.png" />
   </div>
   `
 }

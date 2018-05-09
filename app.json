@@ -1,11 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/news/article/article"
+    "pages/news/article/article",
+    "pages/login/login",
+    "pages/news/list/list"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "华广财务在线 - 新生专题页",
+    "navigationBarTitleText": "华广财务在线",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#f8f8f8"
   },

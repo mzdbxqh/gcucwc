@@ -1,7 +1,4 @@
-// pages/index/index.js
-var jsUtil = require('../../utils/util.js')
-var app = getApp()
-
+// pages/login/login.js
 Page({
 
   /**
@@ -15,9 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    jsUtil.getUserInfo(() => {
-       console.log("test")
-    })
+  
   },
 
   /**
@@ -67,5 +62,23 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 用户提供手机号码用于绑定
+   */
+  viewAsMember: function (e) {
+    console.log(e)
+    console.log(e.detail.encryptedData)
+    console.log(e.detail.iv)
+  },
+
+  /**
+   * 访客访问
+   */
+  viewAsGuest: function () {
+    wx.redirectTo({
+      url: '/pages/news/list/list',
+    })
   }
 })

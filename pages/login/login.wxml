@@ -1,0 +1,12 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">新用户指引</view>
+        <view class="page__desc">如需使用校内服务，请点击绿色按钮，允许小程序获取当前微信账号绑定的手机号码，并通过手机号码绑定校内身份。</view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <button class="weui-btn" type="primary" 
+                bindgetphonenumber="viewAsMember"
+                open-type="getPhoneNumber">绑定校内身份</button>
+        <button class="weui-btn" type="default" bindtap="viewAsGuest">作为访客使用</button>
+    </view>
+</view>
