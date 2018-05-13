@@ -1,7 +1,4 @@
-// pages/index/index.js
-var jsUtil = require('../../utils/util.js')
-var app = getApp()
-
+// pages/app/info/info.js
 Page({
 
   /**
@@ -15,9 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    jsUtil.getUserInfo(() => {
-       
-    })
+  
   },
 
   /**

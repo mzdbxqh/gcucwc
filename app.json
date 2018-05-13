@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/news/article/article",
     "pages/login/login",
-    "pages/news/list/list"
+    "pages/news/list/list",
+    "pages/app/info/info",
+    "pages/app/list/list"
   ],
   "window": {
     "navigationBarTextStyle": "black",

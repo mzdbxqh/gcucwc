@@ -1,4 +1,5 @@
-// pages/login/login.js
+var jsUtil = require('../../utils/util.js')
+var app = getApp()
 Page({
 
   /**
@@ -68,9 +69,33 @@ Page({
    * 用户提供手机号码用于绑定
    */
   viewAsMember: function (e) {
-    console.log(e)
-    console.log(e.detail.encryptedData)
-    console.log(e.detail.iv)
+    if (e.detail.encryptedData) {
+      jsUtil.sessionRequest({
+        url: '/user/bind/phone',
+        data: {
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv
+        },
+        success: function(res1) {
+          console.log(res1)
+          var result = res1.result
+          // 进入手动绑定逻辑
+          if(result == "手动绑定"){
+            app.globalData.userType = res1.userType
+            app.globalData.isLogin = false
+            wx.redirectTo({
+              url: '/pages/app/bindPhone/bindPhone',
+            })
+          } else if (result == "绑定成功") {
+            app.globalData.userType = res1.userType
+            app.globalData.isLogin = true
+            wx.redirectTo({
+              url: '/pages/app/list/list',
+            })
+          }
+        }
+      })
+    }
   },
 
   /**

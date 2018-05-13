@@ -4,7 +4,10 @@ App({
     
   },
   globalData:{
-    userInfo:null
+    userInfo: null,
+    isLogin: false,
+    userType: "",
+    sessionId: ""
   },
   
   /**
