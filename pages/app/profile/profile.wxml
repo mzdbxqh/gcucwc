@@ -1,2 +1,41 @@
-<!--pages/app/info/info.wxml-->
-<text>pages/app/info/info.wxml</text>
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">个人信息</view>
+        <view class="page__desc">本页面信息将用于制作校园一卡通。其中姓名、证件号码、学院/部门等信息有误的话请通过「华工广州学院财务处」公众号留言校正，照片可以自行更换为近期的证件照。</view>
+    </view>
+    <view class="page__bd">
+    <!-- body start -->
+        
+      <!-- 列表开始 -->
+      <!-- <view class="weui-cells__title">人员资料</view> -->
+      <view class="weui-cells weui-cells_after-title">
+
+        <navigator url="/pages/app/profile/upload" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">照片</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+          <image src="{{avatar}}" style="margin-right: 5px;vertical-align: middle;width:84px; height: 120px;"></image>
+          </view>
+        </navigator>
+
+
+        <view class="weui-cell">
+          <view class="weui-cell__bd">学号/工号</view>
+          <view class="weui-cell__ft">{{code}}</view>
+        </view>
+
+        <view class="weui-cell">
+          <view class="weui-cell__bd">姓名</view>
+          <view class="weui-cell__ft">{{name}}</view>
+        </view>
+
+       <view class="weui-cell">
+          <view class="weui-cell__bd">部门/学院</view>
+          <view class="weui-cell__ft">{{dept}}</view>
+        </view>
+
+      </view>
+      <!-- 列表结束 -->
+
+    <!-- body end -->
+    </view>
+</view>

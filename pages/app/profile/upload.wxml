@@ -1,0 +1,16 @@
+<import src="../../../weCropper/we-cropper.wxml"/>
+<view class="cropper-wrapper">
+    <template is="we-cropper" data="{{...cropperOpt}}"/>
+    <view class="cropper-buttons">
+      <view class='cropper-button-box'>
+        <button class="weui-btn mini-btn upload" type="primary" 
+                size="mini" 
+                bindtap="uploadTap">选择照片</button>
+      </view>
+      <view class='cropper-button-box'>
+        <button class="weui-btn mini-btn getCropperImage" type="default" 
+                size="mini" 
+                bindtap="getCropperImage">上传照片</button>
+      </view>
+    </view>
+</view>

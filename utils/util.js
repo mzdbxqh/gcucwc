@@ -289,7 +289,7 @@ function sessionUploader({ url, filePath, formData = {}, success, fail, complete
           console.log("登录失效")
           typeof success == "function" && success(data)
         } else if (res['statusCode'] === 500) {
-          this.formErrTip({
+          that.formErrTip({
             title: "真是抱歉，服务器恐怕是被撑爆了"
           })
         }
@@ -299,7 +299,7 @@ function sessionUploader({ url, filePath, formData = {}, success, fail, complete
         console.log(res)
       },
       complete: function (res) {
-        complete(res)
+        typeof complete == "function" && complete(res)
       }
     })
 

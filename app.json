@@ -7,7 +7,8 @@
     "pages/app/profile/profile",
     "pages/app/list/list",
     "pages/app/bindPhone/bindPhone",
-    "pages/app/bindPhone/checkVerifyCode"
+    "pages/app/bindPhone/checkVerifyCode",
+    "pages/app/profile/upload"
   ],
   "window": {
     "navigationBarTextStyle": "black",

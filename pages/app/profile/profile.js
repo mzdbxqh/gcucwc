@@ -1,18 +1,36 @@
 // pages/app/info/info.js
+var app = getApp()
+var jsUtil = require('../../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    code: "200630858480",
+    name: "张三丰",
+    dept: "汽车工程系",
+    avatar: app.serverUrl + "/user/avatar"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    jsUtil.sessionRequest({
+      url: '/user/info',
+      method: 'GET',
+      success: function(data) {
+        console.log(data)
+        that.setData({
+          name: data.name,
+          code: data.code,
+          dept: data.dept,
+          avatar: app.serverUrl + '/user/avatar?' + new Date().getTime()
+        })
+      }
+    })
   },
 
   /**

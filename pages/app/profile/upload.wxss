@@ -1,0 +1,27 @@
+/* pages/app/profile/upload.wxss */
+.cropper-outter {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  margin: 30px auto;
+}
+.cropper {
+  background-color: #e2e2e2;
+  margin: 10px;
+  border-radius: 0;
+  border: 5px solid #fff;
+}
+.cropper-buttons {
+  margin: 0 30px;
+}
+.cropper-button-box {
+  width: 49%;
+  float: left;
+}
+.cropper-button-box button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  position: relative;
+}
