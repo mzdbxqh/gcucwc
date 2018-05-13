@@ -81,6 +81,7 @@ Page({
           var result = res1.result
           // 进入手动绑定逻辑
           if(result == "手动绑定"){
+            // 此处userType为手机号码
             app.globalData.userType = res1.userType
             app.globalData.isLogin = false
             wx.redirectTo({

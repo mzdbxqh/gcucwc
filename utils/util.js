@@ -1,10 +1,10 @@
 var app = getApp()
 
 //表单提示
-function formErrTip({ title, duration = 1500, callback = function () { } }) {
+function formErrTip({ title, duration = 9000, callback = function () { } }) {
   wx.showToast({
     title: title,
-    icon: 'loading', //TODO:不支持该ICON
+    icon: 'none',
     image: '../../images/tip_error.png',
     duration: duration,
     success: function () {
@@ -23,6 +23,12 @@ function formSuccessTip({ title, duration = 1500, callback = function () { } }) 
       // bug解决之前手动延时
       setTimeout(callback, duration)
     }
+  })
+}
+function formLoading({ title }) {
+  wx.showLoading({
+    title: title,
+    mask: true
   })
 }
 
@@ -180,7 +186,7 @@ function getUserDetailInfo(cb) {
   wx.getUserInfo({
     withCredentials: true,
     success: function (res2) {
-      console.log(res2)
+      console.log("get user detail info")
       that.sessionRequest({
         url: '/user/info',
         data: {
@@ -305,6 +311,7 @@ module.exports = {
   checkVersion: checkVersion,
   formErrTip: formErrTip,
   formSuccessTip: formSuccessTip,
+  formLoading: formLoading,
   getUserInfo: getUserInfo,
   checkUserInfoAuth: checkUserInfoAuth,
   showAuthTip: showAuthTip,

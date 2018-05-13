@@ -1,0 +1,26 @@
+<view class="page">
+
+  <view class="page__hd">
+    <view class="page__title">手动绑定校内身份</view>
+    <view class="page__desc">如微信已绑定手机号码，则此处不需要填写手机号码；如未绑定则需填写手机号码并获取验证码，以确认手机号码的归属。</view>
+  </view>
+  
+  <view class="page__bd">
+
+    <view class="weui-cells__title">请输入你验证码</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+                <input class="weui-input" placeholder="" 
+                       bindchange="verifyCodeChange" 
+                       value="{{verifyCode}}"/>
+            </view>
+        </view>
+    </view>
+
+  </view>
+
+  <view class='page__bd page__bd_spacing'>
+    <button class="weui-btn" type="primary" bindtap="callSubmit">提交</button>
+  </view>
+</view>
