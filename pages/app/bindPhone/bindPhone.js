@@ -91,9 +91,24 @@ Page({
       url: '/user/bind',
       data: postData,
       success: function (res) {
-        wx.redirectTo({
-          url: '/pages/app/bindPhone/checkVerifyCode',
-        })
+        // 手动填写的手机号码，需验证
+        if (res === "发送验证码"){
+          wx.redirectTo({
+            url: '/pages/app/bindPhone/checkVerifyCode',
+          })
+        // 已绑定微信的手机号码，不需要验证
+        } else {
+          app.globalData.isLogin = true
+          jsUtil.formSuccessTip({
+            title: '绑定成功',
+            callback: function () {
+              wx.redirectTo({
+                url: '/pages/app/list/list',
+              })
+            }
+          })
+        }
+        
       },
       fail: function (e) {
         jsUtil.formErrTip({
