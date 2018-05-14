@@ -1,7 +1,7 @@
 var app = getApp()
 
 //表单提示
-function formErrTip({ title, duration = 9000, callback = function () { } }) {
+function formErrTip({ title, duration = 4000, callback = function () { } }) {
   wx.showToast({
     title: title,
     icon: 'none',

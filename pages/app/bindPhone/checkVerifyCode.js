@@ -44,6 +44,7 @@ Page({
       url: '/user/bind/code',
       data: postData,
       success: function (res) {
+        app.globalData.isLogin = true
         jsUtil.formSuccessTip({
           title: '绑定成功',
           callback: function(){

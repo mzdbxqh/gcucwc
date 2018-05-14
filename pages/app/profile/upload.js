@@ -32,7 +32,7 @@ Page({
         console.log(`before picture loaded, i can do something`)
         console.log(`current canvas context: ${ctx}`)
         wx.showToast({
-          title: '上传中',
+          title: '导入中',
           icon: 'loading',
           duration: 20000
         })
@@ -76,7 +76,12 @@ Page({
           url: '/media/upload',
           filePath: src,
           success: function (data) {
-            wx.navigateBack()
+            jsUtil.formSuccessTip({
+              title: '已上传，审核中',
+              callback: function(){
+                wx.navigateBack()
+              }
+            })
           }
         })
         // console.log(src)
