@@ -10,7 +10,7 @@ Page({
     code: "200630858480",
     name: "张三丰",
     dept: "汽车工程系",
-    avatar: app.serverUrl + "/user/avatar"
+    avatar: app.serverUrl + "/user/avatar/" + app.globalData.unionId
   },
 
   /**
@@ -27,7 +27,7 @@ Page({
           name: data.name,
           code: data.code,
           dept: data.dept,
-          avatar: app.serverUrl + '/user/avatar?' + new Date().getTime()
+          avatar: app.serverUrl + '/user/avatar/' + app.globalData.unionId + '?' + new Date().getTime()
         })
       }
     })

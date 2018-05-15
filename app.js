@@ -7,7 +7,8 @@ App({
     userInfo: null,
     isLogin: false,
     userType: "",
-    sessionId: ""
+    sessionId: "",
+    unionId: ""
   },
   
   /**

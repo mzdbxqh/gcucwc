@@ -75,6 +75,7 @@ function getUserInfo(cb) {
               if (res1.statusCode === 200) {
                 console.log("Server return 200")
                 app.globalData.sessionId = res1.data.sessionId
+                app.globalData.unionId = res1.data.unionId
                 // 用户未绑定身份，尝试获取手机号码
                 if (res1.data.result === "未绑定用户" ||
                     res1.data.result === "新用户") {
