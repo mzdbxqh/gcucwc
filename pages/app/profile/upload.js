@@ -77,7 +77,7 @@ Page({
           filePath: src,
           success: function (data) {
             jsUtil.formSuccessTip({
-              title: '已上传，审核中',
+              title: '请等候审核',
               callback: function(){
                 wx.navigateBack()
               }

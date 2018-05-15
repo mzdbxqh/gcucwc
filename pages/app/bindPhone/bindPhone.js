@@ -112,9 +112,8 @@ Page({
       },
       fail: function (e) {
         jsUtil.formErrTip({
-          title: "请检查信息"
+          title: "信息可能有误"
         })
-        wx.hideLoading()
       }
     })
   },
