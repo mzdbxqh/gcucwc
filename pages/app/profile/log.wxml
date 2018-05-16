@@ -1,2 +1,5 @@
 <!--pages/app/profile/log.wxml-->
-<text>pages/app/profile/log.wxml</text>
+<view class="pic-box">
+  <image class="pic" src="{{url}}"></image>
+</view>
+<view class="pic-status">{{status}}</view>

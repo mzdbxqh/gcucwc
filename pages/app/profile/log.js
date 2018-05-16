@@ -1,18 +1,50 @@
-// pages/app/profile/log.js
+var app = getApp()
+var jsUtil = require('../../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    url: '/avatar/' + app.globalData.openId + '/last',
+    status: "无记录"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    jsUtil.sessionRequest({
+      url: '/avatar/log /' + app.globalData.openId +  '/ last',
+      success: function(res) {
+        if(res.delFlag) {
+          var newStatus = ""
+          switch(res.delFlag){
+            case 0:
+              newStatus = "审核中"
+              break
+            case 1:
+              newStatus = "审核不通过"
+              break;
+            case 2:
+              newStatus = "审核通过"
+              break;
+          }
+          that.setData({
+            status: newStatus
+          })
+        }
+      },
+      fail: function(e) {
+        jsUtil.formErrTip({
+          title: "无上传记录",
+          callback: function () {
+            wx.navigateBack({})
+          }
+        })
+      }
+    })
   },
 
   /**

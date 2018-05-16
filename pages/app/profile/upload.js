@@ -53,7 +53,7 @@ Page({
     this.wecropper.touchEnd(e)
   },
   getUploadLog() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/app/profile/log',
     })
   },

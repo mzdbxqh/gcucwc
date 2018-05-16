@@ -12,10 +12,10 @@
                 size="mini" 
                 bindtap="getCropperImage">传照片</button>
       </view>
-      <!-- <view class='cropper-button-box'>
+       <view class='cropper-button-box'>
         <button class="weui-btn mini-btn" type="default" 
                 size="mini" 
                 bindtap="getUploadLog">查记录</button>
-      </view> -->
+      </view> 
     </view>
 </view>
