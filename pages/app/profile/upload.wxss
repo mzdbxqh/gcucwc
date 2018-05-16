@@ -14,12 +14,14 @@
   margin: 0 30px;
 }
 .cropper-button-box {
-  width: 49%;
+  width: 49.9%;
+  /* width: 33.3%; */
   float: left;
 }
 .cropper-button-box button {
   display: block;
   width: 120px;
+  /* width: 80px; */
   height: 40px;
   line-height: 40px;
   margin: 0 auto;

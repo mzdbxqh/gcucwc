@@ -52,6 +52,11 @@ Page({
   touchEnd(e) {
     this.wecropper.touchEnd(e)
   },
+  getUploadLog() {
+    wx.redirectTo({
+      url: '/pages/app/profile/log',
+    })
+  },
   uploadTap() {
     const self = this
 

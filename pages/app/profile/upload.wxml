@@ -5,12 +5,17 @@
       <view class='cropper-button-box'>
         <button class="weui-btn mini-btn upload" type="primary" 
                 size="mini" 
-                bindtap="uploadTap">选择照片</button>
+                bindtap="uploadTap">选照片</button>
       </view>
       <view class='cropper-button-box'>
         <button class="weui-btn mini-btn getCropperImage" type="default" 
                 size="mini" 
-                bindtap="getCropperImage">上传照片</button>
+                bindtap="getCropperImage">传照片</button>
       </view>
+      <!-- <view class='cropper-button-box'>
+        <button class="weui-btn mini-btn" type="default" 
+                size="mini" 
+                bindtap="getUploadLog">查记录</button>
+      </view> -->
     </view>
 </view>
