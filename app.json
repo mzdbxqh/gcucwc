@@ -9,7 +9,8 @@
     "pages/app/profile/upload",
     "pages/app/profile/log",
     "pages/app/list",
-    "pages/news/list"
+    "pages/news/list",
+    "pages/app/bindSso/bindSso"
   ],
   "window": {
     "navigationBarTextStyle": "black",

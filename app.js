@@ -8,7 +8,8 @@ App({
     isLogin: false,
     userType: "",
     sessionId: "",
-    unionId: ""
+    unionId: "",
+    openId: ""
   },
   
   /**
@@ -16,6 +17,6 @@ App({
    */
   // serverUrl: "http://localhost:10011",
   // serverUrl: "http://192.168.199.209:10011/app",
-  // serverUrl: "http://192.168.199.108:10011/app",
-  serverUrl: "https://cwc.gcu.edu.cn/app" // 服务器Url
+  serverUrl: "http://192.168.199.108:10011/app",
+  // serverUrl: "https://cwc.gcu.edu.cn/app" // 服务器Url
 })
