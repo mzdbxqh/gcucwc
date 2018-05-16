@@ -1,18 +1,28 @@
 // pages/app/list/list.js
+var jsUtil = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    jsUtil.sessionRequest({
+      url: '/menu/app',
+      method: 'GET',
+      success: function(res) {
+        that.setData({
+          list: res
+        })
+      }
+    })
   },
 
   /**

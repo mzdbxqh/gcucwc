@@ -7,10 +7,12 @@
 
         <!-- <view class="weui-cells__title">列表</view> -->
         <view class="weui-cells weui-cells_after-title">
-            <navigator url="/pages/app/profile/profile" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">校对信息</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">可以上传一卡通照片</view>
-            </navigator>
+          <block wx:for="{{list}}" wx:key="*this">
+              <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__bd">{{item.name}}</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access">{{item.desc}}</view>
+              </navigator>
+            </block>
         </view>
     </view>
 </view>
