@@ -7,7 +7,7 @@
 .pic {
   width: 168px;
   height: 240px;
-  margin: 10px;
+  margin: 15px;
   border-radius: 5px;
 }
 .pic-status {

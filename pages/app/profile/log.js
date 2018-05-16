@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: '/avatar/' + app.globalData.openId + '/last',
+    url: app.serverUrl + '/user/avatar/' + app.globalData.openId + '/last',
     status: "无记录"
   },
 
@@ -16,9 +16,10 @@ Page({
   onLoad: function (options) {
     var that = this
     jsUtil.sessionRequest({
-      url: '/avatar/log /' + app.globalData.openId +  '/ last',
+      url: '/user/avatar/log/' + app.globalData.openId +  '/last',
       success: function(res) {
-        if(res.delFlag) {
+        console.log(res)
+        if (res.localAvatar) {
           var newStatus = ""
           switch(res.delFlag){
             case 0:
@@ -32,7 +33,8 @@ Page({
               break;
           }
           that.setData({
-            status: newStatus
+            status: newStatus,
+            url: app.serverUrl + '/user/avatar/' + app.globalData.openId + '/last'
           })
         }
       },
