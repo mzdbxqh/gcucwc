@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/news/article/article",
     "pages/login/login",
-    "pages/news/list/list",
     "pages/app/profile/profile",
-    "pages/app/list/list",
     "pages/app/bindPhone/bindPhone",
     "pages/app/bindPhone/checkVerifyCode",
-    "pages/app/profile/upload"
+    "pages/app/profile/upload",
+    "pages/app/profile/log",
+    "pages/app/list",
+    "pages/news/list"
   ],
   "window": {
     "navigationBarTextStyle": "black",

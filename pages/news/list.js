@@ -1,4 +1,4 @@
-var jsUtil = require('../../../utils/util.js')
+var jsUtil = require('../../utils/util.js')
 Page({
   data: {
     list: [
