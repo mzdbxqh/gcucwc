@@ -78,7 +78,7 @@ Page({
     this.wecropper.getCropperImage((src) => {
       if (src) {
         jsUtil.sessionUploader({
-          url: '/media/upload',
+          url: '/media/avatar/upload',
           filePath: src,
           success: function (data) {
             jsUtil.formSuccessTip({
