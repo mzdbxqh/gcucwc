@@ -69,6 +69,7 @@ Page({
    * 用户提供手机号码用于绑定
    */
   viewAsMember: function (e) {
+    console.log(e)
     if (e.detail.encryptedData) {
       jsUtil.sessionRequest({
         url: '/user/bind/phone',
@@ -91,7 +92,7 @@ Page({
             app.globalData.userType = res1.userType
             app.globalData.isLogin = true
             wx.redirectTo({
-              url: '/pages/app/list/list',
+              url: '/pages/app/list',
             })
           }
         }
@@ -104,7 +105,7 @@ Page({
    */
   viewAsGuest: function () {
     wx.redirectTo({
-      url: '/pages/news/list/list',
+      url: '/pages/news/list',
     })
   }
 })
