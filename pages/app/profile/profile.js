@@ -10,14 +10,13 @@ Page({
     code: "200630858480",
     name: "张三丰",
     dept: "汽车工程系",
-    avatar: app.serverUrl + "/user/avatar/" + app.globalData.unionId
+    avatar: app.serverUrl + "/user/avatar/" + app.globalData.openId
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.unionId)
     var that = this
     jsUtil.sessionRequest({
       url: '/user/info',
@@ -28,7 +27,7 @@ Page({
           name: data.name,
           code: data.code,
           dept: data.dept,
-          avatar: app.serverUrl + '/user/avatar/' + app.globalData.unionId + '?' + new Date().getTime()
+          avatar: app.serverUrl + '/user/avatar/' + app.globalData.openId + '?' + new Date().getTime()
         })
       }
     })
