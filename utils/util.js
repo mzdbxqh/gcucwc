@@ -79,33 +79,15 @@ function getUserInfo(cb) {
                 // 用户未绑定身份，尝试获取手机号码
                 if (res1.data.result === "未绑定用户" ||
                     res1.data.result === "新用户") {
-                  // 检查是否有权限获取用户信息
-                  that.checkUserInfoAuth({
-                    // 有权限，获取用户信息并跳转登录页，由用户点击按钮触发获取手机号码
-                    success: function () {
-                      console.log("checkUserInfoAuth")
-                      that.getUserDetailInfo(function(){
-                        wx.redirectTo({
-                          url: '/pages/login/login',
-                        })
-                      })
-                    }, 
-                    // 没权限，重复索取直至成功，或放弃退出小程序
-                    fail: function () {
-                      that.showAuthTip(() => {
-                        that.getUserDetailInfo(function () {
-                          wx.redirectTo({
-                            url: '/pages/login/login',
-                          })
-                        })
-                      })
-                    }
+                  // 获取用户信息
+                  wx.redirectTo({
+                    url: '/pages/login/login',
                   })
                 // 用户状态正常，进入正常页面
                 } else {
                 // if(res1.data.result === "登录成功") {
                   wx.redirectTo({
-                    url: '/pages/app/list/list',
+                    url: '/pages/app/list',
                   })
                 }
               // 服务器返回异常
@@ -177,34 +159,6 @@ function showAuthDialog(cb) {
       } else {
         typeof cb == "function" && cb()
       }
-    }
-  })
-}
-
-// 首次登录: 获取用户详细信息以及密钥等
-function getUserDetailInfo(cb) {
-  var that = this
-  wx.getUserInfo({
-    withCredentials: true,
-    success: function (res2) {
-      console.log("get user detail info")
-      that.sessionRequest({
-        url: '/user/info',
-        data: {
-          iv: res2.iv,
-          rawData: res2.rawData,
-          signature: res2.signature,
-          encryptedData: res2.encryptedData
-        },
-        success: function(res3){
-          console.log(res3)
-          cb()
-        },
-        fail: function(res4) {
-          console.log(res4)
-        }
-      })
-      return true
     }
   })
 }
@@ -317,7 +271,6 @@ module.exports = {
   checkUserInfoAuth: checkUserInfoAuth,
   showAuthTip: showAuthTip,
   showAuthDialog: showAuthDialog,
-  getUserDetailInfo: getUserDetailInfo,
   exitTip: exitTip,
   sessionRequest: sessionRequest,
   sessionUploader: sessionUploader
