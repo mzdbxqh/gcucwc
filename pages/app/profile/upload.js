@@ -90,7 +90,9 @@ Page({
             jsUtil.formSuccessTip({
               title: '请等候审核',
               callback: function(){
-                wx.navigateBack()
+                wx.navigateTo({
+                  url: '/pages/app/profile/log',
+                })()
               }
             })
           }

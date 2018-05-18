@@ -3,5 +3,11 @@
         <view class="page__title">华广财务在线</view>
         <view class="page__desc">华广财务在线是华南理工大学广州学院财务处官方小程序，旨在提供账务、缴费、校园一卡通相关的资讯及服务。</view>
         <view>正在为你接入，请稍等。</view>
+        <view class="page__desc err_tip" style="display:{{tipDisplayStatus}}">
+          <view>如长时间停留在当前页面的话，可以考虑进行以下操作</view>
+          <view>1、点击右上角同心圆按钮退出小程序</view>
+          <view>2、点击微信底部的「发现」->「小程序」，找到「华广财务在线」并删除（苹果是左划删除，安卓是长按删除）。</view>
+          <view>3、重新「搜索」或者从「附近的小程序」中找到「华广财务在线」并打开。</view>
+        </view>
     </view>
 </view>
