@@ -31,6 +31,9 @@ Page({
             case 2:
               newStatus = "审核通过"
               break;
+            case -1:
+              newStatus = "已撤销"
+              break;
           }
           that.setData({
             status: newStatus,
