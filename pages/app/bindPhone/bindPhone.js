@@ -62,9 +62,9 @@ Page({
       return
     }
 
-    if (that.data.code === "") {
+    if (that.data.code === "" || (that.data.code.length != 7 && that.data.code.length != 12)) {
       jsUtil.formErrTip({
-        title: "请填写学号/工号",
+        title: "请填写有效学号/工号",
         duration: 9000
       })
       return
@@ -72,7 +72,8 @@ Page({
 
     if (that.data.certificateNo === "") {
       jsUtil.formErrTip({
-        title: "请填写证件号码"
+        title: "请填写证件号码",
+        duration: 9000
       })
       return
     }

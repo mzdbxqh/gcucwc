@@ -94,13 +94,13 @@ function getUserInfo(cb) {
               // 服务器返回异常
               } else {
               // if (res1.statusCode === 400) {
-                that.exitTip('服务器出错')
+                that.exitTip('服务器出错，请通过「华工广州学院财务处」公众号留言给我们。')
                 console.log("Server return" + res1.statusCode)
               }
               // 服务器请求失败
             }, fail: function () {
               console.log("Server error")
-              that.exitTip('服务器出错')
+              that.exitTip('服务器出错，请通过「华工广州学院财务处」公众号留言给我们。')
             }
           })
           // login接口调用失败
