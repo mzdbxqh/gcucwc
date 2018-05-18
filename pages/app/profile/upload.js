@@ -6,6 +6,7 @@ const height = (width * 240) / 168
 
 Page({
   data: {
+    hasSelected: false,
     cropperOpt: {
       id: 'cropper',
       width,  // 画布宽度
@@ -22,7 +23,6 @@ Page({
   },
   onLoad(option) {
     const { cropperOpt } = this.data
-
     // 若同一个页面只有一个裁剪容器，在其它Page方法中可通过this.wecropper访问实例
     new WeCropper(cropperOpt)
       .on('ready', (ctx) => {
@@ -59,24 +59,30 @@ Page({
   },
   uploadTap() {
     const self = this
-
     wx.chooseImage({
       count: 1, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success(res) {
         const src = res.tempFilePaths[0]
-
         self.wecropper.pushOrign(src)
+        self.setData({
+          hasSelected: true
+        })
       }
     })
   },
   getCropperImage() {
+    // 如果还没选图片，不给上传(空图片)
+    const self = this
+    if(!self.data.hasSelected) return
+
     jsUtil.formLoading({
       title: '正在上传'
     })
     this.wecropper.getCropperImage((src) => {
       if (src) {
+        console.log(src)
         jsUtil.sessionUploader({
           url: '/media/avatar/upload',
           filePath: src,
