@@ -104,7 +104,7 @@ Page({
             title: '绑定成功',
             callback: function () {
               wx.redirectTo({
-                url: '/pages/app/list/list',
+                url: '/pages/app/list',
               })
             }
           })
