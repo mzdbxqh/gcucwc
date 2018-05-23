@@ -72,7 +72,8 @@ Page({
       }
     })
   },
-  getCropperImage() {
+  getCropperImage(e) {
+    const formId = e.detail.formId
     // 如果还没选图片，不给上传(空图片)
     const self = this
     if(!self.data.hasSelected) return
@@ -87,12 +88,21 @@ Page({
           url: '/media/avatar/upload',
           filePath: src,
           success: function (data) {
-            jsUtil.formSuccessTip({
-              title: '请等候审核',
-              callback: function(){
-                wx.navigateTo({
-                  url: '/pages/app/profile/log',
-                })()
+            // 上传formId用于发送审核结果
+            jsUtil.sessionRequest({
+              url: '/media/avatar/upload/form',
+              data: {
+                formId: formId
+              },
+              success: function(){
+                jsUtil.formSuccessTip({
+                  title: '请等候审核',
+                  callback: function () {
+                    wx.navigateTo({
+                      url: '/pages/app/profile/log',
+                    })()
+                  }
+                })
               }
             })
           }

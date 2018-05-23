@@ -8,9 +8,10 @@
                 bindtap="uploadTap">选照片</button>
       </view>
       <view class='cropper-button-box'>
-        <button class="weui-btn mini-btn getCropperImage" type="default" 
-                size="mini" 
-                bindtap="getCropperImage">传照片</button>
+        <form bindsubmit="getCropperImage" report-submit="true">
+          <button class="weui-btn mini-btn getCropperImage" formType="submit" 
+                  size="mini">传照片</button>
+        </form>
       </view>
        <view class='cropper-button-box'>
         <button class="weui-btn mini-btn" type="default" 
