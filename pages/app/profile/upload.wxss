@@ -13,6 +13,11 @@
 .cropper-buttons {
   margin: 0 30px;
 }
+.cropper-tip {
+  margin: -10px 30px 10px 30px;
+  text-align: center;
+  font-size: 12px;
+}
 .cropper-button-box {
   /* width: 49.9%; */
    width: 33.3%; 

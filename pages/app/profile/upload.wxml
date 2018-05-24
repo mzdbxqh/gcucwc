@@ -1,6 +1,7 @@
 <import src="../../../weCropper/we-cropper.wxml"/>
 <view class="cropper-wrapper">
     <template is="we-cropper" data="{{...cropperOpt}}"/>
+    <view class="cropper-tip">拖动/两指缩放图片，以裁剪成合适的大小</view>
     <view class="cropper-buttons">
       <view class='cropper-button-box'>
         <button class="weui-btn mini-btn upload" type="primary" 
