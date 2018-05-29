@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: app.serverUrl + '/user/avatar/' + app.globalData.openId + '/last',
+    url: '',
     status: "无记录"
   },
 

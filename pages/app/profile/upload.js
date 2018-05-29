@@ -100,7 +100,7 @@ Page({
                   callback: function () {
                     wx.navigateTo({
                       url: '/pages/app/profile/log',
-                    })()
+                    })
                   }
                 })
               }
