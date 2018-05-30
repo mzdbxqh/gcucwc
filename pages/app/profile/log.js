@@ -7,7 +7,7 @@ Page({
    */
   data: {
     url: '',
-    status: "无记录"
+    status: "加载中"
   },
 
   /**
@@ -38,6 +38,10 @@ Page({
           that.setData({
             status: newStatus,
             url: app.serverUrl + '/user/avatar/' + app.globalData.openId + '/last'
+          })
+        } else {
+          that.setData({
+            status: "无记录"
           })
         }
       },
