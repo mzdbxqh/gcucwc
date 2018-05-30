@@ -26,10 +26,10 @@ Page({
               newStatus = "审核中"
               break
             case 1:
-              newStatus = "审核不通过"
+              newStatus = "审核通过"
               break;
             case 2:
-              newStatus = "审核通过"
+              newStatus = "审核不通过"
               break;
             case -1:
               newStatus = "已撤销"
