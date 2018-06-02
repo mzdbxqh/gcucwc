@@ -101,7 +101,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    // if (res.from === 'button') {
+    //   console.log(res)
+    // }
+    return {
+      title: '华广可以更换饭卡照片啦',
+      path: 'pages/index/index'
+    }
   }
 })

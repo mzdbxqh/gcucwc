@@ -9,8 +9,13 @@
   height: 240px;
   margin: 15px;
   border-radius: 5px;
+  box-shadow:2px 2px 3px #aaaaaa;
+  transform:rotate(5deg);
 }
 .pic-status {
   display: block;
   text-align: center;
+}
+.weui-btn:first-child {
+  margin-top: 30px;
 }

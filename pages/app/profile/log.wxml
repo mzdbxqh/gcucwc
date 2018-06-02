@@ -3,3 +3,8 @@
   <image class="pic" src="{{url}}"></image>
 </view>
 <view class="pic-status">{{status}}</view>
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" open-type="share">转告同学/同事</button>
+  </view>
+</view>
