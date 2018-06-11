@@ -21,7 +21,7 @@ Page({
         console.log(res)
         if (res.localAvatar) {
           var newStatus = ""
-          switch(res.delFlag){
+          switch(res.auditFlag){
             case 0:
               newStatus = "审核中"
               break
