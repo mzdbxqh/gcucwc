@@ -13,16 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    jsUtil.sessionRequest({
-      url: '/menu/app',
-      method: 'GET',
-      success: function(res) {
-        that.setData({
-          list: res
-        })
-      }
-    })
+
   },
 
   /**
@@ -36,7 +27,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    jsUtil.sessionRequest({
+      url: '/menu/app',
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          list: res
+        })
+      }
+    })
   },
 
   /**
