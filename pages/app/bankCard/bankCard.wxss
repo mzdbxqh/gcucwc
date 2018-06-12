@@ -1,0 +1,4 @@
+/* pages/app/bankCard/bankCard.wxss */
+.weui-btn {
+  margin-bottom: 30rpx;
+}

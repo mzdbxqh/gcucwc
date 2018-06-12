@@ -10,7 +10,9 @@
     "pages/app/profile/log",
     "pages/app/list",
     "pages/news/list",
-    "pages/app/bindSso/bindSso"
+    "pages/app/bindSso/bindSso",
+    "pages/app/bankCard/bankCard",
+    "pages/app/bankCard/log"
   ],
   "window": {
     "navigationBarTextStyle": "black",
