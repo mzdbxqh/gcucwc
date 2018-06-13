@@ -62,6 +62,7 @@ Page({
       if (prefix !== '436742' &&
           prefix !== '589970' &&
           prefix !== '621081' &&
+          prefix !== '621700' &&
           prefix !== '622280' &&
           prefix !== '623668') {
         jsUtil.formErrTip({
