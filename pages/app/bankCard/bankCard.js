@@ -27,6 +27,14 @@ Page({
     const formId = e.detail.formId
 
     // 判空
+    if (self.data.bankcardNo === self.data.bankcardNo) {
+      jsUtil.formErrTip({
+        title: "银行卡没变化，不用提交"
+      })
+      return
+    }
+
+    // 判空
     if (self.data.bankcardNo === "") {
       jsUtil.formErrTip({
         title: "请填写银行卡号"
@@ -47,9 +55,26 @@ Page({
     const prefix = self.data.bankcardNo.substr(0,6) + ''
     // 16位银行卡，3种bin
     if (len === 16) {
-      if (prefix !== '621080' &&
+      if (prefix !== '421349' &&
+          prefix !== '434061' &&
+          prefix !== '434062' &&
+          prefix !== '524094' &&
+          prefix !== '526410' &&
+          prefix !== '552245' &&
+          prefix !== '621080' &&
           prefix !== '621466' &&
-          prefix !== '621499') {
+          prefix !== '621488' &&
+          prefix !== '621499' &&
+          prefix !== '622966' &&
+          prefix !== '622988' &&
+          prefix !== '621082' &&
+          prefix !== '623251' &&
+          prefix !== '622382' &&
+          prefix !== '621487' &&
+          prefix !== '621083' &&
+          prefix !== '621084' &&
+          prefix !== '623350' &&
+          prefix !== '620107') {
         jsUtil.formErrTip({
           title: "不是有效的建设银行储蓄卡卡号，请核对银行卡"
         })
@@ -57,14 +82,24 @@ Page({
       }
     // 19位银行卡号,5种bin
     } else {
-      console.log(prefix)
-      console.log(prefix === '622280')
-      if (prefix !== '436742' &&
+      if (prefix !== '621284' &&
+          prefix !== '436742' &&
           prefix !== '589970' &&
+          prefix !== '620060' &&
           prefix !== '621081' &&
+          prefix !== '621467' &&
+          prefix !== '621598' &&
+          prefix !== '621621' &&
           prefix !== '621700' &&
           prefix !== '622280' &&
-          prefix !== '623668') {
+          prefix !== '622700' &&
+          prefix !== '621673' &&
+          prefix !== '623211' &&
+          prefix !== '623668' &&
+          prefix !== '623094' &&
+          prefix !== '623669' &&
+          prefix !== '623656' &&
+          prefix !== '623644') {
         jsUtil.formErrTip({
           title: "不是有效的建设银行储蓄卡卡号，请核对银行卡"
         })
@@ -109,9 +144,10 @@ Page({
       url: '/bankcard',
       method: 'GET',
       success: function (res) {
+        console.log(res)
         wx.hideLoading()
         self.setData({
-          bankcardNo: res
+          bankcardNo: res.bankcardNo
         })
       }
     })
