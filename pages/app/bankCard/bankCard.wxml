@@ -4,7 +4,7 @@
     <view class="page__desc">本页面用于校对和更新用户本人的建设银行储蓄卡账号，账号将用于批扣学杂费和代发奖助学金等。如卡号无误请返回上一页。注意：建行储蓄卡卡号长度为16位或者19位。</view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">请输入银行卡号</view>
+    <view class="weui-cells__title">银行卡号</view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__bd">
