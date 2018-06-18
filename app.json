@@ -12,7 +12,8 @@
     "pages/news/list",
     "pages/app/bindSso/bindSso",
     "pages/app/bankCard/bankCard",
-    "pages/app/bankCard/log"
+    "pages/app/bankCard/log",
+    "pages/app/cardRefund/cardRefund"
   ],
   "window": {
     "navigationBarTextStyle": "black",

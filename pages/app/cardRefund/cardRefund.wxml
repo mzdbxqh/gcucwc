@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">一卡通退费预约</view>
+    <view class="page__desc">本页面用于毕业生预约退还一卡通余额。详细安排见当年毕业生离校相关通知。</view>
+    <view class="page__desc">只有卡上余额大于五元且做了退费预约的同学，才会进行退费操作。可以指定用其他同学的银行卡账号代收款项。只能使用建行储蓄卡。</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">收款人银行卡号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" 
+                 bindchange="bankcardNoChange" 
+                 value="{{bankcardNo}}"/>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">收款人姓名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" 
+                 bindchange="userNameChange" 
+                 value="{{userName}}"/>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd page__bd_spacing'>
+    <form bindsubmit="callSubmit" report-submit="true">
+      <block wx:if="{{!hasBook}}">
+        <button class="weui-btn" type="primary"
+                formType="submit">预约</button>
+      </block>
+      <block wx:if="{{hasBook && hasReady && hasAudit}}">
+        <button class="weui-btn btn-info">已预约</button>
+      </block>
+      <block wx:if="{{hasBook && hasReady && !hasAudit}}">
+        <button class="weui-btn btn-info">预约审核中</button>
+      </block>
+    </form>
+    <!-- <navigator url='/pages/app/refund/log'> -->
+      <button class='weui-btn' type="default" catchtap='viewLog'>退费记录</button>
+    <!-- </navigator> -->
+    
+  </view>
+</view>
