@@ -2,7 +2,7 @@
   <view class="page__hd">
     <view class="page__title">一卡通退费预约</view>
     <view class="page__desc">本页面用于毕业生预约退还一卡通余额。详细安排见当年毕业生离校相关通知。</view>
-    <view class="page__desc">只有卡上余额大于五元且做了退费预约的同学，才会进行退费操作。可以指定用其他同学的银行卡账号代收款项。只能使用建行储蓄卡。</view>
+    <view class="page__desc">只有卡上余额大于五元且做了退费预约的同学，才会进行退费操作。只能使用建行储蓄卡。</view>
   </view>
   <view class="page__bd">
     <view class="weui-cells__title">收款人银行卡号</view>
