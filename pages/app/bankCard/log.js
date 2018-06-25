@@ -18,7 +18,7 @@ Page({
       title: "加载中"
     })
     jsUtil.sessionRequest({
-      url: '/bankcard/log/list',
+      url: '/app/bankcard/log/openId/' + app.globalData.openId + '/list',
       method: 'GET',
       success: function (res) {
         wx.hideLoading()

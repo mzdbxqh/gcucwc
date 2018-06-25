@@ -66,7 +66,7 @@ function getUserInfo(cb) {
         if (res.code) {
           // 发起网络请求，获取unionID和微信的sessionKey
           wx.request({
-            url: app.serverUrl + '/user/login',
+            url: app.serverUrl + '/sys/login',
             data: {
               code: res.code
             },

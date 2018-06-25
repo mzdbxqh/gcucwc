@@ -89,7 +89,7 @@ Page({
     }
 
     jsUtil.sessionRequest({
-      url: '/user/bind',
+      url: '/user/info/phone/manual',
       data: postData,
       success: function (res) {
         // 手动填写的手机号码，需验证

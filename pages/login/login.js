@@ -72,7 +72,7 @@ Page({
     console.log(e)
     if (e.detail.encryptedData) {
       jsUtil.sessionRequest({
-        url: '/user/bind/phone',
+        url: '/user/info/phone/automatic',
         data: {
           encryptedData: e.detail.encryptedData,
           iv: e.detail.iv

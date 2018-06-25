@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     var that = this
     jsUtil.sessionRequest({
-      url: '/user/avatar/log/' + app.globalData.openId +  '/last',
+      url: '/app/avatar/log/openId/' + app.globalData.openId +  '/last',
       success: function(res) {
         console.log(res)
         if (res.localAvatar) {

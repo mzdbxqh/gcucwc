@@ -85,12 +85,12 @@ Page({
       if (src) {
         console.log(src)
         jsUtil.sessionUploader({
-          url: '/media/avatar/upload',
+          url: '/app/avatar',
           filePath: src,
           success: function (data) {
             // 上传formId用于发送审核结果
             jsUtil.sessionRequest({
-              url: '/media/avatar/upload/form',
+              url: '/app/avatar/formId',
               data: {
                 formId: formId
               },

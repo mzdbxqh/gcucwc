@@ -47,7 +47,7 @@ Page({
     }
 
     jsUtil.sessionRequest({
-      url: '/bankcard/log',
+      url: '/app/bankcard/log',
       data: postData,
       success: function () {
         jsUtil.formSuccessTip({
@@ -71,7 +71,7 @@ Page({
       title: "加载中"
     })
     jsUtil.sessionRequest({
-      url: '/bankcard',
+      url: '/user/bankcard/openId/' + app.globalData.openId,
       method: 'GET',
       success: function (res) {
         wx.hideLoading()

@@ -20,7 +20,7 @@ Page({
   onLoad: function (options) {
     var that = this
     jsUtil.sessionRequest({
-      url: '/user/info',
+      url: '/user/info/' + app.globalData.openId,
       method: 'GET',
       success: function(data) {
         console.log(data)
@@ -28,7 +28,7 @@ Page({
           name: data.name,
           code: data.code,
           dept: data.dept,
-          avatar: app.serverUrl + '/user/avatar/' + app.globalData.openId + '?' + new Date().getTime()
+          avatar: app.serverUrl + '/user/avatar/' + app.globalData.openId + '/active?' + new Date().getTime()
         })
       }
     })

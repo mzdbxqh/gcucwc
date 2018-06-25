@@ -75,7 +75,7 @@ Page({
     }
 
     jsUtil.sessionRequest({
-      url: '/cardRefund/book/log',
+      url: '/app/bankcard/book/cardRefund',
       data: postData,
       success: function () {
         jsUtil.formSuccessTip({
@@ -100,7 +100,7 @@ Page({
       title: "加载中"
     })
     jsUtil.sessionRequest({
-      url: '/cardRefund/book',
+      url: '/app/bankcard/book/cardRefund/openId/' + app.globalData.openId + '/last',
       method: 'GET',
       success: function (res) {
         wx.hideLoading()

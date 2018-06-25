@@ -29,7 +29,7 @@ Page({
   onShow: function () {
     var that = this
     jsUtil.sessionRequest({
-      url: '/menu/app',
+      url: '/sys/menu/app/list',
       method: 'GET',
       success: function (res) {
         that.setData({

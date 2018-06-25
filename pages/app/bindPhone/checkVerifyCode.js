@@ -41,7 +41,7 @@ Page({
     }
 
     jsUtil.sessionRequest({
-      url: '/user/bind/code',
+      url: '/user/info/phone/code',
       data: postData,
       success: function (res) {
         app.globalData.isLogin = true
