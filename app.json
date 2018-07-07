@@ -13,7 +13,9 @@
     "pages/app/bindSso/bindSso",
     "pages/app/bankCard/bankCard",
     "pages/app/bankCard/log",
-    "pages/app/cardRefund/cardRefund"
+    "pages/app/cardRefund/cardRefund",
+    "pages/app/electricityRefund/electricityRefund",
+    "pages/app/waterRefund/waterRefund"
   ],
   "window": {
     "navigationBarTextStyle": "black",
