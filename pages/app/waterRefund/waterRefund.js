@@ -11,7 +11,7 @@ Page({
     bankcardNo: "",
     userName: "",
     houseCode: "",
-    coldWaterRemian: 0,
+    coldWaterRemain: 0,
     hotWaterRemain: 0,
     hasBook: true,
     hasAudit: false,
@@ -50,7 +50,7 @@ Page({
    */
   coldWaterRemainChange: function (e) {
     this.setData({
-      coldWaterRemain: e.detail.value
+      coldWaterRemain: Math.ceil(e.detail.value)
     })
   },
 
@@ -59,7 +59,7 @@ Page({
    */
   hotWaterRemainChange: function (e) {
     this.setData({
-      hotWaterRemain: e.detail.value
+      hotWaterRemain: Math.ceil(e.detail.value)
     })
   },
 
@@ -80,7 +80,28 @@ Page({
 
     if (!self.data.userName) {
       jsUtil.formErrTip({
-        title: '请填写收款人姓名'
+        title: '请填写预约人姓名'
+      })
+      return
+    }
+
+    if (!self.data.houseCode) {
+      jsUtil.formErrTip({
+        title: '请填写宿舍号，例如C04-123'
+      })
+      return
+    }
+
+    if (!self.data.coldWaterRemain && self.data.coldWaterRemain !== 0) {
+      jsUtil.formErrTip({
+        title: '请填写冷水表剩余量'
+      })
+      return
+    }
+
+    if (!self.data.hotWaterRemain && self.data.hotWaterRemain !== 0) {
+      jsUtil.formErrTip({
+        title: '请填写热水表剩余量'
       })
       return
     }
@@ -101,6 +122,9 @@ Page({
     var postData = {
       bankcardNo: self.data.bankcardNo,
       userName: self.data.userName,
+      houseCode: self.data.houseCode,
+      coldWaterRemain: self.data.coldWaterRemain,
+      hotWaterRemain: self.data.hotWaterRemain,
       formId: formId
     }
 
@@ -148,8 +172,8 @@ Page({
           bankcardNo: res.bankcardNo,
           userName: res.userName,
           houseCode: res.houseCode,
-          coldWaterRemain: coldWaterRemain,
-          hotWaterRemain: hotWaterRemain,
+          coldWaterRemain: res.coldWaterRemain ? res.coldWaterRemain : 0,
+          hotWaterRemain: res.hotWaterRemain ? res.hotWaterRemain : 0,
           hasBook: res.hasBook,
           hasAudit: res.hasAudit,
           hasReady: true
