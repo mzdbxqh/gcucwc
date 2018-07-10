@@ -34,7 +34,7 @@
         </view>
       </view>
     </view>
-    <view class="weui-cells__title">冷水剩余量</view>
+    <view class="weui-cells__title">冷水剩余量(吨)</view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__bd">
@@ -44,7 +44,7 @@
         </view>
       </view>
     </view>
-    <view class="weui-cells__title">热水剩余量</view>
+    <view class="weui-cells__title">热水剩余量(吨)</view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__bd">
