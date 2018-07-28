@@ -15,7 +15,9 @@
     "pages/app/bankCard/log",
     "pages/app/cardRefund/cardRefund",
     "pages/app/electricityRefund/electricityRefund",
-    "pages/app/waterRefund/waterRefund"
+    "pages/app/waterRefund/waterRefund",
+    "pages/analysis/list",
+    "pages/doc/list"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -28,5 +30,36 @@
     "connectSocket": 30000,
     "uploadFile": 30000,
     "downloadFile": 30000
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/news/list",
+        "text": "资讯",
+        "iconPath": "images/tab-news.png",
+        "selectedIconPath": "images/tab-news-selected.png"
+      },
+      {
+        "pagePath": "pages/doc/list",
+        "text": "文档",
+        "iconPath": "images/tab-document.png",
+        "selectedIconPath": "images/tab-document-selected.png"
+      },
+      {
+        "pagePath": "pages/analysis/list",
+        "text": "数据",
+        "iconPath": "images/tab-chart.png",
+        "selectedIconPath": "images/tab-chart-selected.png"
+      },
+      {
+        "pagePath": "pages/app/list",
+        "text": "应用",
+        "iconPath": "images/tab-application.png",
+        "selectedIconPath": "images/tab-application-selected.png"
+      }
+    ]
   }
 }

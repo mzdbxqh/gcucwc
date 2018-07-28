@@ -91,7 +91,7 @@ Page({
           } else if (result == "绑定成功") {
             app.globalData.userType = res1.userType
             app.globalData.isLogin = true
-            wx.redirectTo({
+            wx.switchTab({
               url: '/pages/app/list',
             })
           }

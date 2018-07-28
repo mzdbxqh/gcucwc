@@ -1,6 +1,6 @@
 <view class="page">
   <view class="page__hd">
-    <view class="page__title">华广财务在线</view>
+    <view class="page__title">资讯</view>
     <view class="page__desc">华广财务在线是华南理工大学广州学院财务处官方小程序，旨在提供账务、缴费、校园一卡通相关的资讯及服务。</view>
   </view>
   <view class="page__bd page__bd_spacing">

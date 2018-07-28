@@ -66,15 +66,15 @@ function getUserInfo(cb) {
         if (res.code) {
           // 发起网络请求，获取unionID和微信的sessionKey
           wx.request({
-            url: app.serverUrl + '/sys/login',
+            // url: app.serverUrl + '/sys/login',
+            url: app.serverUrl + '/login',
             data: {
               code: res.code
             },
             // 返回用户状态
             success: function (res1) {
               if (res1.statusCode === 200) {
-                console.log("Server return 200")
-                app.globalData.sessionId = res1.data.sessionId
+                app.globalData.token = res1.data.token.access_token
                 app.globalData.openId = res1.data.openId
                 app.globalData.unionId = res1.data.unionId
                 // 用户未绑定身份，尝试获取手机号码
@@ -87,7 +87,7 @@ function getUserInfo(cb) {
                 // 用户状态正常，进入正常页面
                 } else {
                 // if(res1.data.result === "登录成功") {
-                  wx.redirectTo({
+                  wx.switchTab({
                     url: '/pages/app/list',
                   })
                 }
@@ -182,12 +182,12 @@ function sessionRequest({ url, data, success, fail, complete, method = "POST" })
   var header = {}
   url = app.serverUrl + url
   var callback = function () {
-    var sessionId = app.globalData.sessionId
-    cookieStr = "JSESSIONID=" + sessionId
+    var token = app.globalData.token
     header = {
       'content-type': 'application/x-www-form-urlencoded',
       'isWechat': '1',
-      'Cookie': cookieStr
+      'Authorization': 'bearer ' + token
+      // 'Cookie': cookieStr
     }
 
     wx.request({
@@ -221,12 +221,11 @@ function sessionUploader({ url, filePath, formData = {}, success, fail, complete
   var header = {}
   url = app.serverUrl + url
   var callback = function () {
-    var sessionId = app.globalData.sessionId
-    cookieStr = "JSESSIONID=" + sessionId
+    var token = app.globalData.token
     header = {
       'content-type': 'multipart/form-data',
       'isWechat': '1',
-      'Cookie': cookieStr
+      'Authorization': 'bearer ' + token
     }
 
     wx.uploadFile({
