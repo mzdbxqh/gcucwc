@@ -104,7 +104,7 @@ Page({
    * 访客访问
    */
   viewAsGuest: function () {
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/news/list',
     })
   }

@@ -1,5 +1,5 @@
-// pages/app/list/list.js
-var jsUtil = require('../../utils/util.js')
+const app = getApp()
+const jsUtil = require('../../utils/util.js')
 Page({
 
   /**
@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -27,12 +27,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this
+    const self = this
+    const userType = app.globalData.userType
+    if (!userType) {
+      jsUtil.formErrTip({
+        title: '非校内用户无权访问当前页面',
+        duration: 2000,
+        callback: function () {
+          wx.switchTab({
+            url: '/pages/news/list',
+          })
+        }
+      })
+    }
     jsUtil.sessionRequest({
       url: '/sys/menu/app/list',
       method: 'GET',
       success: function (res) {
-        that.setData({
+        self.setData({
           list: res
         })
       }

@@ -87,6 +87,13 @@ function getUserInfo(cb) {
                 // 用户状态正常，进入正常页面
                 } else {
                 // if(res1.data.result === "登录成功") {
+                  if(res1.data.student) {
+                    app.globalData.userType = 'student'
+                    app.globalData.userInfo = res1.data.student
+                  } else if(res1.data.staff) {
+                    app.globalData.userType = 'staff'
+                    app.globalData.userInfo = res1.data.staff
+                  }
                   wx.switchTab({
                     url: '/pages/app/list',
                   })
