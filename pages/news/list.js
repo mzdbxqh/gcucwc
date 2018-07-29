@@ -1,7 +1,9 @@
-var jsUtil = require('../../utils/util.js')
+const app = getApp()
+const jsUtil = require('../../utils/util.js')
 Page({
   data: {
-    list: [
+    list: [],
+    list1: [
       {
         id: 'phone',
         name: '缴费方式',
@@ -76,7 +78,17 @@ Page({
 
   },
   onLoad: function (e) {
-
+    const self = this
+    jsUtil.sessionRequest({
+      url: '/news/category/list',
+      method: 'GET',
+      success: function (res) {
+        console.log(res)
+        self.setData({
+          list: res
+        })
+      }
+    })
   },
   getPhoneNumber: function (e) {
     console.log(e.detail.errMsg)

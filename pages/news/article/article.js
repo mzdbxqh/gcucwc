@@ -1,23 +1,40 @@
-var WxParse = require('../../../wxParse/wxParse.js')
-var content = require('../../../utils/content.js')
+const app = getApp()
+const jsUtil = require('../../../utils/util.js')
+const WxParse = require('../../../wxParse/wxParse.js')
+const content = require('../../../utils/content.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    title: '',
+    content: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    wx.setNavigationBarTitle({
-      title:content.html[options.pid].title
+    const self = this
+    jsUtil.sessionRequest({
+      url: '/news/content/' + options.pid,
+      method: 'GET',
+      success: function (res) {
+        console.log(res)
+        self.setData({
+          title: res.title,
+          content: res.content
+        })
+        wx.setNavigationBarTitle({
+          // title: content.html[options.pid].title
+          title: res.title
+        })
+        // WxParse.wxParse('article', 'html', content.html[options.pid].content, self, 18);
+        WxParse.wxParse('article', 'html', res.content, self, 18);
+      }
     })
-    WxParse.wxParse('article', 'html', content.html[options.pid].content, that, 18);
+    
   },
 
   navBack: function (){
